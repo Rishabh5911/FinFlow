@@ -16,7 +16,7 @@ exports.createRecord = async (req, res) => {
         if(amount === undefined || amount <= 0){
             return res.status(400).json({
                 success:false,
-                message:"Amount is required and must be a non-negative number"
+                message:"Amount is required and must be greater than 0"
             })
         }
 
@@ -128,7 +128,7 @@ exports.updateRecord = async(req,res) => {
         if(amount === undefined || amount <= 0){
             return res.status(400).json({
                 success:false,
-                message:"Amount is required and must be a non-negative number"
+                message:"Amount is required and must be greater than 0"
             }) 
         }
 
