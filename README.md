@@ -125,7 +125,7 @@ src/
     }
     ```
 
-- **PATCH** `/api/auth/manage-user/:userId`: Update user status (Admin only).
+- **PATCH** `/api/auth/manage-user/:userId`: Update user  (Admin only).
   - **Request Body**:
     ```json
     {
