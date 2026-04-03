@@ -13,14 +13,14 @@ exports.createRecord = async (req, res) => {
             })
         }
 
-        if(amount <0){
+        if(amount === undefined || amount <0){
             return res.status(400).json({
                 success:false,
-                message:"Amount must be a positive number"
+                message:"Amount is required and must be a non-negative number"
             })
         }
 
-        if(!['income','expense'].includes(type)){
+        if(type &&  !['income','expense'].includes(type)){
             return res.status(400).json({
                 success:false,
                 message:"Type must be either income or expense"
